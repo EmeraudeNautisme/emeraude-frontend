@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export default function Realisations() {
+  const [showNavigation, setShowNavigation] = useState(false);
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
@@ -17,23 +18,34 @@ export default function Realisations() {
       );
 
       setSlides(response.data.data);
-
-      console.log(response.data.data);
     };
 
     fetchSlides();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setShowNavigation(window.innerWidth > 1780);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <RealisationsStyled>
       <div className="title">
-        <img className="boat" src="/bateau.png" />
+        <img src="/bateau.png" />
         <h2>Nos réalisations</h2>
-        <img className="wave" src="/wave.png" />
+        <img src="/wave.png" />
       </div>
-
-      <div className="slider-wrapper">
-        <span className="custom-prev">
+      <div className="slider-container">
+        <span
+          style={showNavigation ? {} : { display: "none" }}
+          className="custom-prev"
+        >
           <img src="/prev.png" />
         </span>
         <Swiper
@@ -41,15 +53,35 @@ export default function Realisations() {
           slidesPerView={3}
           spaceBetween={23}
           slidesPerGroup={3}
-          pagination={{ clickable: true }}
-          navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
+          navigation={
+            showNavigation
+              ? {
+                  prevEl: ".custom-prev",
+                  nextEl: ".custom-next",
+                }
+              : false
+          }
+          breakpoints={{
+            1680: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+            },
+
+            768: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+
+            250: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+            },
           }}
+          pagination={{ clickable: true }}
         >
           {slides.map((slide) => {
             return (
-              <SwiperSlide className="slide" key={slide.id}>
+              <SwiperSlide key={slide.id}>
                 <img
                   src={`${import.meta.env.VITE_STRAPI_URL}${slide.image.url}`}
                 />
@@ -57,7 +89,10 @@ export default function Realisations() {
             );
           })}
         </Swiper>
-        <span className="custom-next">
+        <span
+          style={showNavigation ? {} : { display: "none" }}
+          className="custom-next"
+        >
           <img src="/next.png" />
         </span>
       </div>
@@ -66,92 +101,86 @@ export default function Realisations() {
 }
 
 const RealisationsStyled = styled.div`
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  margin-top: 150px;
   gap: 30px;
-  margin-bottom: 50px;
+  margin-top: 150px;
 
   .title {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-size: 55px;
+    flex-direction: column;
 
     h2 {
       font-family: "Rozha One";
-      color: #084887;
+      font-size: 55px;
       font-weight: 400;
+      color: #084887;
     }
   }
 
-  .boat {
-    width: 78px;
+  .swiper {
+    max-width: 1560px;
+    padding: 0 0 50px 0;
   }
 
-  .wave {
-    width: 148px;
+  .swiper-slide {
+    width: 505px;
+    height: 305px;
+    border-radius: 15px;
+    border: 2px solid #084887;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
-  .slider-wrapper {
+  .slider-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
     position: relative;
-  }
-
-  .custom-next {
-    position: absolute;
-    top: 50%;
-    right: 35px;
-    transform: translateY(-50%);
-    cursor: pointer;
   }
 
   .custom-prev {
     position: absolute;
     top: 50%;
     left: 35px;
+    z-index: 150;
     transform: translateY(-50%);
     cursor: pointer;
   }
 
-  .swiper {
-    width: calc(3 * 505px + 2 * 23px);
-    overflow: hidden;
-    padding-bottom: 45px;
-  }
-
-  .swiper-slide {
-    width: 505px !important;
-    height: 305px !important;
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 15px;
-      border: 2px solid #084887;
-    }
+  .custom-next {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    z-index: 150;
+    transform: translateY(-50%);
+    cursor: pointer;
   }
 
   .swiper-pagination-bullet {
-    background: transparent;
-    border: 5px solid #084887;
+    opacity: 1;
     width: 19px;
     height: 19px;
-    opacity: 1;
+    border: 5px solid #084887;
+    background: transparent;
   }
 
   .swiper-pagination-bullet-active {
-    background: #084887;
+    background-color: #084887;
   }
 
-  @media screen and (max-width: 580px) {
-    .title {
-      h2 {
-        font-size: 45px;
-      }
-    }
+  @media screen and (max-width: 1780px) {
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 80px;
   }
 `;
