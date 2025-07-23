@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Menu from "./Menu";
 import { NavLink } from "react-router-dom";
+import { useMenu } from "../context/MenuMobileContext";
 
 export default function Navbar() {
+  const { handleOpen, open } = useMenu();
+
   return (
     <NavbarStyled>
       <div className="logo">
@@ -10,8 +13,15 @@ export default function Navbar() {
           <img src="/logo.png" />
         </NavLink>
       </div>
-
       <Menu />
+      <div onClick={handleOpen} className="mobile-button">
+        {!open ? (
+          <img src="/mobile-menu.png" />
+        ) : (
+          <img src="/close-mobile-menu.png" />
+        )}
+        <p>{!open ? "Menu" : "Close"}</p>
+      </div>
     </NavbarStyled>
   );
 }
@@ -34,6 +44,21 @@ const NavbarStyled = styled.div`
     align-items: center;
   }
 
+  .mobile-button {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+
+    p {
+      font-size: 25px;
+      color: #084887;
+    }
+  }
+
   @media screen and (max-width: 1350px) {
     background: #fff;
     margin-top: 20px;
@@ -41,6 +66,16 @@ const NavbarStyled = styled.div`
     justify-self: center;
     padding: 9px 30px;
     border-radius: 15px;
+    box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.1);
+
+    .mobile-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
 
     .logo {
       width: 132px;

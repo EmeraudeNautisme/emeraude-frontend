@@ -146,4 +146,12 @@ const RealisationsStyled = styled.div`
   .swiper-pagination-bullet-active {
     background: #084887;
   }
+
+  @media screen and (max-width: 580px) {
+    .title {
+      h2 {
+        font-size: 45px;
+      }
+    }
+  }
 `;
