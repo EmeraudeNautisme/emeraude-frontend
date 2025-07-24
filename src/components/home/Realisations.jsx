@@ -113,6 +113,7 @@ const RealisationsStyled = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 
     h2 {
       font-family: "Rozha One";
@@ -182,5 +183,11 @@ const RealisationsStyled = styled.div`
 
   @media screen and (max-width: 1024px) {
     margin-top: 80px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .title h2 {
+      font-size: 45px;
+    }
   }
 `;

@@ -64,7 +64,7 @@ const TrustStyled = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
   padding: 0 70.5px;
 
   .title {

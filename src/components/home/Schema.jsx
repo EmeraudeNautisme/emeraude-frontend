@@ -8,7 +8,8 @@ export default function Schema() {
         Refit - Rénovation
       </p>
       <div className="image">
-        <img src="/schema.png" />
+        <img className="schema" src="/schema.png" />
+        <img className="schema-mobile" src="/schema-mobile.png" />
       </div>
     </SchemaStyled>
   );
@@ -39,6 +40,10 @@ const SchemaStyled = styled.div`
     justify-content: center;
   }
 
+  .schema-mobile {
+    display: none;
+  }
+
   @media screen and (max-width: 1700px) {
     align-self: flex-start;
     width: 66%;
@@ -52,6 +57,14 @@ const SchemaStyled = styled.div`
   @media screen and (max-width: 1350px) {
     width: 100%;
     text-align: center;
+
+    .schema-mobile {
+      display: block;
+    }
+
+    .schema {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 580px) {
