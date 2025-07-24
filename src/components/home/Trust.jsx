@@ -118,6 +118,7 @@ const TrustStyled = styled.div`
 
   @media screen and (max-width: 1024px) {
     margin-top: 80px;
+    margin-bottom: 80px;
   }
 
   @media screen and (max-width: 820px) {

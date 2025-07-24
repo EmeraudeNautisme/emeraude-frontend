@@ -57,13 +57,15 @@ const SchemaStyled = styled.div`
   @media screen and (max-width: 1350px) {
     width: 100%;
     text-align: center;
+  }
 
-    .schema-mobile {
-      display: block;
-    }
-
+  @media screen and (max-width: 500px) {
     .schema {
       display: none;
+    }
+
+    .schema-mobile {
+      display: flex;
     }
   }
 

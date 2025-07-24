@@ -190,7 +190,7 @@ const ContactCardStyled = styled.div`
       margin-left: 10px;
     }
     .facebook-logo {
-      left: 0;
+      left: 10px;
       bottom: 19.2px;
     }
 
