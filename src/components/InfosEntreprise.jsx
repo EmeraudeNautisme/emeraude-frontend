@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export default function InfosEntreprise({ style, className, styleInfos }) {
   return (
@@ -12,11 +13,17 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
           <div className="info-contact">
             <span className="info telephone">
               <img src="/mail.png" />
-              <p>emeraude.nautisme@gmx.fr</p>
+              <p>
+                <NavLink to={"mailto:emeraude.nautisme@gmx.fr"}>
+                  emeraude.nautisme@gmx.fr
+                </NavLink>
+              </p>
             </span>
             <span className="info mail">
               <img src="/telephone.png" />
-              <p>06 25 93 96 69</p>
+              <p>
+                <NavLink to={"tel:+33625939669"}>06 25 93 96 69</NavLink>
+              </p>
             </span>
             <span
               style={{ maxWidth: "382px", textAlign: "left" }}
@@ -24,8 +31,15 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
             >
               <img src="/ancre.png" />
               <p>
-                38, Le Limonay <br />
-                35350 St Méloir des Ondes
+                <NavLink
+                  target="_blank"
+                  to={
+                    "https://www.google.com/maps/place/38+Limonay,+35350+Saint-M%C3%A9loir-des-Ondes/@48.6154,-1.9057359,17z/data=!3m1!4b1!4m6!3m5!1s0x480e84ad2b64179b:0x1a1dfae138ed6b86!8m2!3d48.6154!4d-1.903161!16s%2Fg%2F11lmm5xqks?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+                  }
+                >
+                  38, Le Limonay <br />
+                  35350 St Méloir des Ondes
+                </NavLink>
               </p>
             </span>
           </div>
@@ -35,10 +49,17 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
             Retrouvez toutes nos actualités et réalisations sur notre page
             Facebook
           </p>
-          <button>
-            <img src="/facebook.png" />
-            Emeraude Nautisme SAS
-          </button>
+          <NavLink
+            target="_blank"
+            to={
+              "https://www.facebook.com/people/Emeraude-Nautisme/100057038754228/"
+            }
+          >
+            <button>
+              <img src="/facebook.png" />
+              Emeraude Nautisme SAS
+            </button>
+          </NavLink>
         </div>
       </div>
     </InfosEntrepriseStyled>
@@ -50,6 +71,10 @@ const InfosEntrepriseStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  a {
+    color: #000;
+  }
 
   .infos {
     display: flex;

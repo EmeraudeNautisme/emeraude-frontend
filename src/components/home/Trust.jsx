@@ -16,7 +16,6 @@ export default function Trust() {
       );
 
       setSlides(response.data.data);
-      console.log(response.data.data);
     };
 
     fetchSlides();

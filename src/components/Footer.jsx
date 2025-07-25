@@ -13,8 +13,14 @@ export default function Footer() {
               <img src="/wave.png" />
             </div>
             <div className="footer-infos">
-              <p>emeraude.nautisme@gmx.fr</p>
-              <p>06 25 93 96 69</p>
+              <p>
+                <NavLink to={"mailto:emeraude.nautisme@gmx.fr"}>
+                  emeraude.nautisme@gmx.fr
+                </NavLink>
+              </p>
+              <p>
+                <NavLink to={"tel:+33625939669"}>06 25 93 96 69</NavLink>
+              </p>
             </div>
           </div>
           <div className="footer-entreprise">
@@ -27,8 +33,15 @@ export default function Footer() {
                 <strong>SIRET :</strong> 949 746 028 00016
               </p>
               <p>
-                <strong>Adresse :</strong> 38, Le Limonay 35350 St Méloir des
-                Ondes
+                <NavLink
+                  target="_blank"
+                  to={
+                    "https://www.google.com/maps/place/38+Limonay,+35350+Saint-M%C3%A9loir-des-Ondes/@48.6154,-1.9057359,17z/data=!3m1!4b1!4m6!3m5!1s0x480e84ad2b64179b:0x1a1dfae138ed6b86!8m2!3d48.6154!4d-1.903161!16s%2Fg%2F11lmm5xqks?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+                  }
+                >
+                  <strong>Adresse :</strong> 38, Le Limonay 35350 St Méloir des
+                  Ondes
+                </NavLink>
               </p>
             </div>
           </div>
@@ -93,6 +106,10 @@ const FooterStyled = styled.div`
 
   .footer-infos-entreprise {
     font-size: 22px;
+  }
+
+  a {
+    color: #000;
   }
 
   @media screen and (max-width: 1024px) {
