@@ -4,25 +4,25 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <FooterStyled>
-      <img className="wave-footer" src="/wave-footer.png" />
-      <div className="footer-container">
-        <div className="informations">
-          <div className="contact">
-            <div className="title">
+      <img className="footer-wave-footer" src="/wave-footer.png" />
+      <div className="footer-footer-container">
+        <div className="footer-informations">
+          <div className="footer-contact">
+            <div className="footer-title">
               <h4>Informations de contact</h4>
               <img src="/wave.png" />
             </div>
-            <div className="infos">
+            <div className="footer-infos">
               <p>emeraude.nautisme@gmx.fr</p>
               <p>06 25 93 96 69</p>
             </div>
           </div>
-          <div className="entreprise">
-            <div className="title">
+          <div className="footer-entreprise">
+            <div className="footer-title">
               <h4>Société Emeraude Nautisme</h4>
               <img src="/wave.png" />
             </div>
-            <div className="infos-entreprise">
+            <div className="footer-infos-entreprise">
               <p>
                 <strong>SIRET :</strong> 949 746 028 00016
               </p>
@@ -42,7 +42,7 @@ const FooterStyled = styled.div`
   width: 100%;
   overflow: hidden;
 
-  .footer-container {
+  .footer-footer-container {
     width: 100%;
     margin-top: -5px;
     display: flex;
@@ -52,7 +52,7 @@ const FooterStyled = styled.div`
     background-size: cover;
   }
 
-  .informations {
+  .footer-informations {
     display: flex;
     gap: 105px;
     padding: 20px 75px;
@@ -63,14 +63,14 @@ const FooterStyled = styled.div`
     border-radius: 15px;
   }
 
-  .contact,
-  .entreprise {
+  .footer-contact,
+  .footer-entreprise {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
 
-  .title {
+  .footer-title {
     display: flex;
     flex-direction: column;
 
@@ -86,39 +86,39 @@ const FooterStyled = styled.div`
     }
   }
 
-  .infos p {
+  .footer-infos p {
     font-weight: bold;
     font-size: 22px;
   }
 
-  .infos-entreprise {
+  .footer-infos-entreprise {
     font-size: 22px;
   }
 
   @media screen and (max-width: 1024px) {
-    .wave-footer {
+    .footer-wave-footer {
       margin-left: -100px;
     }
   }
 
   @media screen and (max-width: 1400px) {
-    .footer-container {
+    .footer-footer-container {
       justify-content: center;
     }
 
-    .informations {
+    .footer-informations {
       margin: 51px 0;
     }
   }
 
   @media screen and (max-width: 1100px) {
-    .informations {
+    .footer-informations {
       flex-direction: column;
       gap: 35px;
       padding: 17px 24px;
     }
 
-    .footer-container {
+    .footer-footer-container {
       padding: 51px 35px;
     }
   }
