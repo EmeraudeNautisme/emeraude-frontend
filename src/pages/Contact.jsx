@@ -261,7 +261,7 @@ const ContactStyled = styled.div`
       text-align: center;
     }
 
-    .about-navbar-background {
+    .contact-navbar-background {
       height: 170px;
     }
   }
