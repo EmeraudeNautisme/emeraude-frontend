@@ -123,6 +123,8 @@ const AboutStyled = styled.div`
     width: 100%;
     height: 184px;
     background: url("/navbar-background.png");
+    background-size: cover;
+    background-position: center;
   }
 
   .about-container {
