@@ -82,10 +82,6 @@ const NavbarStyled = styled.div`
     }
   }
 
-  @media screen and (max-width: 1350px) {
-    left: 50%;
-  }
-
   @media screen and (max-width: 768px) {
     .logo {
       padding: 0;
