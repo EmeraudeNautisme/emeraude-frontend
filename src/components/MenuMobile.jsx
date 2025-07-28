@@ -71,6 +71,6 @@ const MenuMobileStyled = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    margin-top: 10px;
+    margin-top: 135px;
   }
 `;
