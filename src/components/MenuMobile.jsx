@@ -3,21 +3,27 @@ import { useMenu } from "../context/MenuMobileContext";
 import { NavLink } from "react-router-dom";
 
 export default function MenuMobile() {
-  const { open } = useMenu();
+  const { open, setOpen } = useMenu();
 
   return (
     <MenuMobileStyled style={!open ? { display: "none" } : { display: "flex" }}>
       <ul>
         <li>
-          <NavLink to={"/"}>Accueil</NavLink>
+          <NavLink onClick={() => setOpen(false)} to={"/"}>
+            Accueil
+          </NavLink>
         </li>
         <span className="separator"></span>
         <li>
-          <NavLink to={"/qui-sommes-nous"}>Qui sommes-nous</NavLink>
+          <NavLink onClick={() => setOpen(false)} to={"/qui-sommes-nous"}>
+            Qui sommes-nous
+          </NavLink>
         </li>
         <span className="separator"></span>
         <li>
-          <NavLink to={"/contact"}>Nous contacter</NavLink>
+          <NavLink onClick={() => setOpen(false)} to={"/contact"}>
+            Nous contacter
+          </NavLink>
         </li>
       </ul>
     </MenuMobileStyled>

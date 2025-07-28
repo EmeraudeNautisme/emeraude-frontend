@@ -81,4 +81,13 @@ const NavbarStyled = styled.div`
       width: 132px;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .logo {
+      padding: 0;
+      img {
+        width: 132px;
+      }
+    }
+  }
 `;
