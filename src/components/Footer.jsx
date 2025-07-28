@@ -114,7 +114,7 @@ const FooterStyled = styled.div`
 
   @media screen and (max-width: 1024px) {
     .footer-wave-footer {
-      margin-left: -100px;
+      margin-left: -135px;
     }
   }
 
