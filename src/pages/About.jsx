@@ -263,4 +263,10 @@ const AboutStyled = styled.div`
       text-align: center;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .about-navbar-background {
+      height: 170px;
+    }
+  }
 `;

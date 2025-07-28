@@ -258,5 +258,9 @@ const ContactStyled = styled.div`
       padding: 30px 16px;
       text-align: center;
     }
+
+    .about-navbar-background {
+      height: 170px;
+    }
   }
 `;
