@@ -33,9 +33,7 @@ export default function Hero() {
           return (
             <SwiperSlide key={slide.id}>
               <div className="slide-image">
-                <img
-                  src={`${import.meta.env.VITE_STRAPI_URL}${slide.image.url}`}
-                />
+                <img src={slide.image.url} />
               </div>
             </SwiperSlide>
           );

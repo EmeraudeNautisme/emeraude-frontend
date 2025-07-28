@@ -82,9 +82,7 @@ export default function Realisations() {
           {slides.map((slide) => {
             return (
               <SwiperSlide key={slide.id}>
-                <img
-                  src={`${import.meta.env.VITE_STRAPI_URL}${slide.image.url}`}
-                />
+                <img src={slide.image.url} />
               </SwiperSlide>
             );
           })}
