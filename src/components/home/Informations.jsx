@@ -16,6 +16,7 @@ const InformationsStyled = styled.div`
   padding: 19px 68.5px;
   display: flex;
   gap: 32px;
+  justify-content: center;
   margin-top: -170px;
   position: relative;
   z-index: 100;
