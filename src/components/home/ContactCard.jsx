@@ -6,8 +6,8 @@ export default function ContactCard() {
     <ContactCardStyled>
       <div className="informations-contact">
         <div className="title">
-          <img src="/jumelles.png" />
-          <img className="wave" src="/wave.png" />
+          <img src="/jumelles.png" alt="jumelles" />
+          <img className="wave" src="/wave.png" alt="vague" />
           <h2>Nous contacter</h2>
         </div>
         <div className="entreprise">
@@ -17,13 +17,13 @@ export default function ContactCard() {
           <p>Spécialiste du bateau semi-rigide</p>
         </div>
         <div className="info telephone">
-          <img src="telephone.png" />
+          <img src="telephone.png" alt="téléphone" />
           <NavLink to={"tel:+33625939669"}>
             <p>06 25 93 96 69</p>
           </NavLink>
         </div>
         <div className="info adresse">
-          <img src="ancre.png" />
+          <img src="ancre.png" alt="ancre de bateau" />
           <NavLink
             target="_blank"
             to={
@@ -37,7 +37,7 @@ export default function ContactCard() {
           </NavLink>
         </div>
         <div className="info mail">
-          <img src="mail.png" />
+          <img src="mail.png" alt="icône mail" />
           <NavLink to={"mailto:emeraude.nautisme@gmx.fr"}>
             <p>emeraude.nautisme@gmx.fr</p>
           </NavLink>

@@ -24,9 +24,9 @@ export default function Trust() {
   return (
     <TrustStyled>
       <div className="title">
-        <img src="/boussole.png" />
+        <img src="/boussole.png" alt="boussole" />
         <h2>Ils nous font confiance</h2>
-        <img src="/wave.png" />
+        <img src="/wave.png" alt="vague" />
       </div>
       <div className="slider-container">
         <Swiper
@@ -44,7 +44,7 @@ export default function Trust() {
           {slides.map((slide) => {
             return (
               <SwiperSlide key={slide.id}>
-                <img src={slide.image.url} />
+                <img src={slide.image.url} alt="slide" />
               </SwiperSlide>
             );
           })}

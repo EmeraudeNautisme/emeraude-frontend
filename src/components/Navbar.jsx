@@ -10,7 +10,7 @@ export default function Navbar() {
     <NavbarStyled>
       <div className="logo">
         <NavLink to={"/"}>
-          <img src="/logo.png" />
+          <img src="/logo.png" alt="Logo de Emeraude Nautisme" />
         </NavLink>
       </div>
       <Menu />

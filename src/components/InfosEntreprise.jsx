@@ -12,7 +12,7 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
           </p>
           <div className="info-contact">
             <span className="info telephone">
-              <img src="/mail.png" />
+              <img src="/mail.png" alt="mail" />
               <p>
                 <NavLink to={"mailto:emeraude.nautisme@gmx.fr"}>
                   emeraude.nautisme@gmx.fr
@@ -20,7 +20,7 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
               </p>
             </span>
             <span className="info mail">
-              <img src="/telephone.png" />
+              <img src="/telephone.png" alt="telephone" />
               <p>
                 <NavLink to={"tel:+33625939669"}>06 25 93 96 69</NavLink>
               </p>
@@ -29,7 +29,7 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
               style={{ maxWidth: "382px", textAlign: "left" }}
               className="info adresse"
             >
-              <img src="/ancre.png" />
+              <img src="/ancre.png" alt="ancre" />
               <p>
                 <NavLink
                   target="_blank"
@@ -56,7 +56,7 @@ export default function InfosEntreprise({ style, className, styleInfos }) {
             }
           >
             <button>
-              <img src="/facebook.png" />
+              <img src="/facebook.png" alt="logo facebook" />
               Emeraude Nautisme SAS
             </button>
           </NavLink>

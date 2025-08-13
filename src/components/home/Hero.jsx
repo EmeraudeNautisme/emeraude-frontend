@@ -33,7 +33,7 @@ export default function Hero() {
           return (
             <SwiperSlide key={slide.id}>
               <div className="slide-image">
-                <img src={slide.image.url} />
+                <img src={slide.image.url} alt="slide" />
               </div>
             </SwiperSlide>
           );
@@ -41,7 +41,7 @@ export default function Hero() {
       </Swiper>
       <div className="presentation">
         <h1>Le spécialiste du bateau semi-rigide</h1>
-        <img src="/wave.png" />
+        <img src="/wave.png" alt="vague" />
         <p>
           Experts en réparation de flotteurs de bateaux semi-rigides. De la
           micro-fuite à la déchirure en passant par la fabrication de flotteurs

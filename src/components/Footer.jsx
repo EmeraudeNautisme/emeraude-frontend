@@ -4,13 +4,13 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <FooterStyled>
-      <img className="footer-wave-footer" src="/wave-footer.png" />
+      <img className="footer-wave-footer" src="/wave-footer.png" alt="vague" />
       <div className="footer-footer-container">
         <div className="footer-informations">
           <div className="footer-contact">
             <div className="footer-title">
               <h4>Informations de contact</h4>
-              <img src="/wave.png" />
+              <img src="/wave.png" alt="vague" />
             </div>
             <div className="footer-infos">
               <p>
@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="footer-entreprise">
             <div className="footer-title">
               <h4>Société Emeraude Nautisme</h4>
-              <img src="/wave.png" />
+              <img src="/wave.png" alt="vague" />
             </div>
             <div className="footer-infos-entreprise">
               <p>

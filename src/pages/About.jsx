@@ -9,7 +9,11 @@ export default function About() {
       <div className="about-container">
         <div className="about-title-container">
           <div className="about-title">
-            <img className="about-bateau" src="/bateau.png" />
+            <img
+              className="about-bateau"
+              src="/bateau.png"
+              alt="bateau titre"
+            />
             <h1>Qui sommes-nous ?</h1>
             <img className="about-wave" src="/wave.png" />
           </div>
@@ -25,7 +29,7 @@ export default function About() {
         </div>
         <div className="about-services">
           <div className="about-card-services">
-            <img src="/collage.png" />
+            <img src="/collage.png" alt="collage" />
             <h3>Collage</h3>
             <p>
               D’une simple réparation à la pose d’accessoires, en passant par
@@ -41,7 +45,7 @@ export default function About() {
             </p>
           </div>
           <div className="about-card-services">
-            <img src="/peinture.png" />
+            <img src="/peinture.png" alt="peinture" />
             <h3>Peinture des flotteurs</h3>
             <p>
               Nous sommes applicateurs pour la Bretagne Nord de la peinture
@@ -62,7 +66,7 @@ export default function About() {
             </p>
           </div>
           <div className="about-card-services">
-            <img src="/revetement.png" />
+            <img src="/revetement.png" alt="revêtement" />
             <h3>Revêtement de Sol</h3>
             <p>
               Grâce à ProDeck, nous pouvons équiper tout bateau (semi- rigide ou
@@ -77,7 +81,7 @@ export default function About() {
             </p>
           </div>
           <div className="about-card-services">
-            <img src="/flotteurs.png" />
+            <img src="/flotteurs.png" alt="flotteurs" />
             <h3>Flotteurs neufs</h3>
             <p>
               Nous réalisons des créations sur-mesure en PVC ou en Hypalon,
@@ -98,7 +102,7 @@ export default function About() {
         <div className="about-infos-entreprise-container">
           <div className="about-infos-entreprise">
             <div className="about-thermo">
-              <img src="/thermo.png" />
+              <img src="/thermo.png" alt="icône de thermomètre" />
               <h3>
                 Nos ateliers à hygrométrie et température contrôlés nous
                 permettent de garantir l’intégralité de nos interventions{" "}

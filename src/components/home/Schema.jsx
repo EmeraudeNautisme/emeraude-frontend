@@ -8,8 +8,16 @@ export default function Schema() {
         Refit - Rénovation
       </p>
       <div className="image">
-        <img className="schema" src="/schema.png" />
-        <img className="schema-mobile" src="/schema-mobile.png" />
+        <img
+          className="schema"
+          src="/schema.png"
+          alt="schema de bateau avec légendes"
+        />
+        <img
+          className="schema-mobile"
+          src="/schema-mobile.png"
+          alt="schéma de bateau avec légendes pour appareils mobiles"
+        />
       </div>
     </SchemaStyled>
   );

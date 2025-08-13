@@ -37,16 +37,16 @@ export default function Realisations() {
   return (
     <RealisationsStyled>
       <div className="title">
-        <img src="/bateau.png" />
+        <img src="/bateau.png" alt="bateau" />
         <h2>Nos réalisations</h2>
-        <img src="/wave.png" />
+        <img src="/wave.png" alt="vague" />
       </div>
       <div className="slider-container">
         <span
           style={showNavigation ? {} : { display: "none" }}
           className="custom-prev"
         >
-          <img src="/prev.png" />
+          <img src="/prev.png" alt="image précédente" />
         </span>
         <Swiper
           modules={[Pagination, Navigation]}
@@ -91,7 +91,7 @@ export default function Realisations() {
           style={showNavigation ? {} : { display: "none" }}
           className="custom-next"
         >
-          <img src="/next.png" />
+          <img src="/next.png" alt="image suivante" />
         </span>
       </div>
     </RealisationsStyled>

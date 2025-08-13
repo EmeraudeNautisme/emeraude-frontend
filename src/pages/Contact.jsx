@@ -40,9 +40,9 @@ export default function Contact() {
       <div className="contact-navbar-background"></div>
       <div className="contact-container">
         <div className="title">
-          <img src="/mail-title.png" />
+          <img src="/mail-title.png" alt="icône mail" />
           <h1>Nous contacter</h1>
-          <img src="/wave.png" />
+          <img src="/wave.png" alt="vague" />
           <p>
             N'hésitez pas à nous contacter via le formulaire ci-dessous. Nous
             nous engageons à vous répondre dans les plus brefs délais pour
