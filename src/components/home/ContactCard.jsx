@@ -55,7 +55,11 @@ export default function ContactCard() {
           "https://www.facebook.com/people/Emeraude-Nautisme/100057038754228/"
         }
       >
-        <img className="facebook-logo" src="/facebook.png" />
+        <img
+          className="facebook-logo"
+          src="/facebook.png"
+          alt="logo facebook"
+        />
       </NavLink>
     </ContactCardStyled>
   );

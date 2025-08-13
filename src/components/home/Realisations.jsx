@@ -82,7 +82,7 @@ export default function Realisations() {
           {slides.map((slide) => {
             return (
               <SwiperSlide key={slide.id}>
-                <img src={slide.image.url} />
+                <img src={slide.image.url} alt="slide" />
               </SwiperSlide>
             );
           })}

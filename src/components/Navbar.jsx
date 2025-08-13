@@ -16,9 +16,9 @@ export default function Navbar() {
       <Menu />
       <div onClick={handleOpen} className="mobile-button">
         {!open ? (
-          <img src="/mobile-menu.png" />
+          <img src="/mobile-menu.png" alt="ouvrir le menu" />
         ) : (
-          <img src="/close-mobile-menu.png" />
+          <img src="/close-mobile-menu.png" alt="fermer le menu" />
         )}
         <p>{!open ? "Menu" : "Close"}</p>
       </div>
